@@ -2,13 +2,17 @@
 
 ## Introduction
 
+<<<<<<< HEAD
 The Advanced Digital Signal Processing (ADSP) Lab at NIT Rourkela as a part of its lab evaluation ,Prepared a set of practical problem statements for final projects. These projects are designed to help students apply their learning in signal processing, estimation, and vision-based systems to real-world scenarios.
+=======
+The Advanced Digital Signal Processing (ADSP) Lab at NIT Rourkela, as part of the final evaluation, has set a set of practical problem statements for final projects. These projects are designed to help students apply their learning in signal processing, estimation, and vision-based systems to real-world scenarios.
+>>>>>>> 0fdc4b41fab9be5f9a516321b76f66db85a5d718
 
 In these projects, students will work on problems that combine classical signal processing techniques (like Kalman filtering for state estimation and tracking) with modern computer vision methods. The goal is to build systems that can process visual information, track objects, and make decisions in practical applications.
 
 ## Objective
 
-The main objective is to encourage analytical thinking and problem-solving in real scenarios by applying signal processing and computer vision techniques to practical problems.
+The primary objective is to foster analytical thinking and problem-solving in real-world scenarios by applying signal processing and computer vision techniques to practical problems.
 
 ## Project Assignment
 
@@ -105,4 +109,4 @@ Projects can be completed using standard laptops/desktops, cloud computing resou
 
 ---
 
-**Supervision:** All projects are evaluated by Dr. Upendra Kumar Sahoo and coordinated by TA Kannuru Srinadh,Yerram Deekshith Kumar,Debapriya Das Gupta ADSP Lab, NIT Rourkela.
+**Supervision:** All projects are evaluated by Dr. Upendra Kumar Sahoo and coordinated by TA Kannuru Srinadh, Yerram Deekshith Kumar, and Debapriya Das Gupta, ADSP Lab, NIT Rourkela.
