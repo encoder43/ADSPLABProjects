@@ -50,15 +50,15 @@ Make sure to follow ethical guidelines when working with video data of people, a
 
 ## Deliverables
 
-1. **Detection Code**: Working implementation that processes video and detects falls
-2. **Demo Video**: Video showing the system detecting falls with annotations or alerts
+1.  Working implementation that processes video and detects falls
+2.  Video showing the system detecting falls with annotations or alerts
 3. **Report**: Brief report (10-15 pages) explaining:
    - Your detection approach and why you chose it
    - How your method distinguishes falls from other activities
    - Results showing detection accuracy
    - Analysis of false alarms and missed detections
    - Discussion of limitations and improvements
-4. **Results Summary**: Table or chart showing detection performance metrics
+4.  Table or chart showing detection performance metrics
 
 **Note:** It is not required or expected that you complete all aspects of the project. Evaluation is done based on how much percentage of the criteria is fulfilled. Focus on demonstrating understanding and implementing a working solution for the core aspects of your assigned problem.
 
@@ -66,19 +66,19 @@ Make sure to follow ethical guidelines when working with video data of people, a
 
 Your work will be evaluated based on:
 
-- **Detection Accuracy**: How many real falls you detect (sensitivity/recall)
-- **False Alarm Rate**: How often you incorrectly identify non-falls as falls
-- **Precision**: When you say there's a fall, how often are you correct?
-- **Clarity of Explanation**: How well you explain your detection logic
-- **Robustness**: How well it works with different camera angles and lighting
+- How many real falls you detect (sensitivity/recall)
+- How often you incorrectly identify non-falls as falls
+- When you say there's a fall, how often are you correct?
+- How well you explain your detection logic
+- How well it works with different camera angles and lighting
 
 You should measure and report:
 
-- **Sensitivity (Recall)**: Percentage of actual falls that you detect
-- **Specificity**: Percentage of non-falls correctly identified as non-falls
-- **Precision**: When you detect a fall, how often is it actually a fall?
-- **False Positive Rate**: Number of false alarms per hour of video
-- **Detection Latency**: How quickly after a fall you generate an alert
+- Percentage of actual falls that you detect
+- Percentage of non-falls correctly identified as non-falls
+- When you detect a fall, how often is it actually a fall?
+- Number of false alarms per hour of video
+- How quickly after a fall you generate an alert
 
 ## Future Extensions (Optional)
 

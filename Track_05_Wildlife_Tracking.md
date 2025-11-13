@@ -51,15 +51,15 @@ Make sure to document your dataset sources and any preprocessing.
 
 ## Deliverables
 
-1. **Tracking Code**: Working implementation that processes video and tracks animals
-2. **Tracking Results**: Visualizations showing tracked animals with trajectories overlaid on video
+1.  Working implementation that processes video and tracks animals
+2.  Visualizations showing tracked animals with trajectories overlaid on video
 3. **Report**: Brief report (10-15 pages) explaining:
    - Your tracking approach and why you chose it
    - How you handle occlusions and identity maintenance
    - Results showing tracking performance
    - Analysis of when tracking fails and why
    - Discussion of robustness and efficiency
-4. **Performance Summary**: Metrics showing tracking accuracy and stability
+4.  Metrics showing tracking accuracy and stability
 
 **Note:** It is not required or expected that you complete all aspects of the project. Evaluation is done based on how much percentage of the criteria is fulfilled. Focus on demonstrating understanding and implementing a working solution for the core aspects of your assigned problem.
 
@@ -67,19 +67,19 @@ Make sure to document your dataset sources and any preprocessing.
 
 Your work will be evaluated based on:
 
-- **Tracking Stability**: How consistently you maintain animal tracks without losing them
-- **Identity Preservation**: Whether you maintain correct animal identities (no ID switches)
-- **Robustness**: How well it handles occlusions, multiple animals, and challenging conditions
-- **Clarity of Explanation**: How well you explain your tracking method
-- **Efficiency**: Computational requirements and real-time performance on edge devices
+- How consistently you maintain animal tracks without losing them
+- Whether you maintain correct animal identities (no ID switches)
+- How well it handles occlusions, multiple animals, and challenging conditions
+- How well you explain your tracking method
+- Computational requirements and real-time performance on edge devices
 
 You should measure and report:
 
-- **Tracking Accuracy**: How accurately you estimate animal positions
-- **ID Switches**: How often you mix up which animal is which
-- **Track Fragmentation**: How often you lose and reacquire tracks
-- **Mostly Tracked Ratio**: What percentage of animals are tracked for most of their time in view
-- **Occlusion Handling**: How well you maintain tracking during occlusions
+- How accurately you estimate animal positions
+- How often you mix up which animal is which
+- How often you lose and reacquire tracks
+- What percentage of animals are tracked for most of their time in view
+- How well you maintain tracking during occlusions
 
 ## Future Extensions (Optional)
 

@@ -23,11 +23,11 @@ Create a stereo-based detection system that can detect, track, and potentially c
 
 Students should work on:
 
-1. **Stereo Calibration**: Calibrate two cameras to understand their relative positions
-2. **Drone Detection**: Detect drones in stereo image pairs (can use object detection methods)
-3. **Stereo Matching**: Find corresponding points in left and right images to compute depth
-4. **3D Localization**: Convert 2D detections to 3D positions using computed depth
-5. **Tracking**: Track drones over time and estimate their movement
+1. Calibrate two cameras to understand their relative positions
+2. Detect drones in stereo image pairs (can use object detection methods)
+3. Find corresponding points in left and right images to compute depth
+4. Convert 2D detections to 3D positions using computed depth
+5. Track drones over time and estimate their movement
 
 You can use:
 - Stereo calibration tools (OpenCV provides functions for this)
@@ -57,8 +57,8 @@ Note: You can work with provided stereo datasets or simulate stereo pairs from s
 
 ## Deliverables
 
-1. **Detection and Tracking Code**: Working implementation that processes stereo images and detects/tracks drones
-2. **Demonstration**: Video or images showing detected drones with 3D position estimates and trajectories
+1.  Working implementation that processes stereo images and detects/tracks drones
+2.  Video or images showing detected drones with 3D position estimates and trajectories
 3. **Report**: Brief report (10-15 pages) explaining:
    - Your stereo calibration approach
    - How you detect drones in stereo images
@@ -66,7 +66,7 @@ Note: You can work with provided stereo datasets or simulate stereo pairs from s
    - How you compute 3D positions and track movement
    - Results showing detection and distance estimation accuracy
    - Discussion of challenges and limitations
-4. **Data Analysis**: Results showing distance estimation accuracy compared to ground truth (if available)
+4.  Results showing distance estimation accuracy compared to ground truth (if available)
 
 **Note:** It is not required or expected that you complete all aspects of the project. Evaluation is done based on how much percentage of the criteria is fulfilled. Focus on demonstrating understanding and implementing a working solution for the core aspects of your assigned problem.
 
@@ -74,19 +74,19 @@ Note: You can work with provided stereo datasets or simulate stereo pairs from s
 
 Your work will be evaluated based on:
 
-- **Detection Accuracy**: How well you detect drones (precision and recall)
-- **Distance Estimation Accuracy**: How accurately you estimate drone distances
-- **Tracking Quality**: How well you track drones over time
-- **Clarity of Explanation**: How clearly you explain your stereo vision approach
-- **Robustness**: How well it works at different distances and conditions
+- How well you detect drones (precision and recall)
+- How accurately you estimate drone distances
+- How well you track drones over time
+- How clearly you explain your stereo vision approach
+- How well it works at different distances and conditions
 
 You should measure and report:
 
-- **Detection Performance**: Precision, recall, and F1 score for drone detection
-- **Distance Error**: How far off your distance estimates are from actual distances
-- **Relative Distance Error**: Distance error as a percentage of actual distance
-- **Tracking Accuracy**: How well you maintain drone tracks
-- **3D Position Error**: Accuracy of 3D position estimates (if ground truth available)
+- Precision, recall, and F1 score for drone detection
+- How far off your distance estimates are from actual distances
+- Distance error as a percentage of actual distance
+- How well you maintain drone tracks
+- Accuracy of 3D position estimates (if ground truth available)
 
 ## Future Extensions (Optional)
 

@@ -51,15 +51,15 @@ Make sure to document which dataset you use and how you obtained it.
 
 ## Deliverables
 
-1. **Segmentation Code**: Working code that takes an image as input and produces a segmentation mask showing water regions
-2. **Results**: Segmentation results for multiple test images, showing before and after comparisons
-3. **Report**: Brief report (10-15 pages) explaining:
+1.  Working code that takes an image as input and produces a segmentation mask showing water regions
+2.  Segmentation results for multiple test images, showing before and after comparisons
+3.  Brief report (10-15 pages) explaining:
    - The method you chose and why
    - How your implementation works
    - Results on test images
    - Discussion of strengths and limitations
    - Comparison with other methods (if applicable)
-4. **Visual Outputs**: Images showing original photos, segmentation masks, and overlays
+4.  Images showing original photos, segmentation masks, and overlays
 
 **Note:** It is not required or expected that you complete all aspects of the project. Evaluation is done based on how much percentage of the criteria is fulfilled. Focus on demonstrating understanding and implementing a working solution for the core aspects of your assigned problem.
 
@@ -67,17 +67,17 @@ Make sure to document which dataset you use and how you obtained it.
 
 Your work will be evaluated based on:
 
-- **Accuracy**: How well your method identifies water regions correctly
-- **Robustness**: How well it handles different lighting conditions and image types
-- **Clarity of Explanation**: How clearly you explain your approach and results
-- **Code Quality**: Whether the code is well-structured and documented
+- How well your method identifies water regions correctly
+- How well it handles different lighting conditions and image types
+- How clearly you explain your approach and results
+- Whether the code is well-structured and documented
 
 You should measure and report:
 
-- **Pixel Accuracy**: Percentage of pixels classified correctly
-- **IoU (Intersection over Union)**: Overlap between predicted and actual water regions
-- **Precision**: Of the pixels you labeled as water, how many are actually water?
-- **Recall**: Of all the actual water pixels, how many did you find?
+- Percentage of pixels classified correctly
+- Overlap between predicted and actual water regions
+- Of the pixels you labeled as water, how many are actually water?
+- Of all the actual water pixels, how many did you find?
 
 ## Future Extensions (Optional)
 

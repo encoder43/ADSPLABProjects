@@ -23,10 +23,10 @@ Develop a vision-based trajectory tracking control system that can follow a whee
 
 Students should work on:
 
-1. **Robot Detection**: Detect the robot/vehicle in video frames using object detection or template matching methods
-2. **Position Estimation**: Estimate the robot's position (center point or bounding box) in each frame
-3. **Trajectory Tracking**: Track the robot across frames and maintain its trajectory even during temporary occlusions
-4. **Trajectory Visualization**: Visualize the tracked path overlaid on the video or as a separate plot
+1. Detect the robot/vehicle in video frames using object detection or template matching methods
+2. Estimate the robot's position (center point or bounding box) in each frame
+3. Track the robot across frames and maintain its trajectory even during temporary occlusions
+4. Visualize the tracked path overlaid on the video or as a separate plot
 
 You should think about:
 - Object detection methods (like YOLO, SSD, or template matching) to find the robot in frames
@@ -58,9 +58,9 @@ Make sure to document which dataset you use and any preprocessing steps.
 
 ## Deliverables
 
-1. **Tracking Code**: Working Python implementation that processes video and tracks robot trajectory
-2. **Trajectory Visualization**: Videos or images showing the tracked robot with trajectory overlaid
-3. **Trajectory Plots**: Plots showing the reconstructed trajectory path
+1.  Working Python implementation that processes video and tracks robot trajectory
+2.  Videos or images showing the tracked robot with trajectory overlaid
+3.  Plots showing the reconstructed trajectory path
 4. **Report**: Brief report (10-15 pages) explaining:
    - Your detection and tracking approach
    - How you handle occlusions and missed detections
@@ -68,7 +68,7 @@ Make sure to document which dataset you use and any preprocessing steps.
    - Results showing tracking accuracy
    - Analysis of tracking errors and when they occur
    - Discussion of limitations and improvements
-5. **Demo Video**: Video showing the tracking system in action with trajectory visualization
+5.  Video showing the tracking system in action with trajectory visualization
 
 **Note:** It is not required or expected that you complete all aspects of the project. Evaluation is done based on how much percentage of the criteria is fulfilled. Focus on demonstrating understanding and implementing a working solution for the core aspects of your assigned problem.
 
@@ -76,22 +76,22 @@ Make sure to document which dataset you use and any preprocessing steps.
 
 Your work will be evaluated based on:
 
-- **Tracking Accuracy**: How accurately you track the robot's position and orientation over time
-- **Control Performance**: How well the robot follows desired trajectories (tracking error, convergence time)
-- **Tracking Continuity**: How well you maintain tracking even during occlusions
-- **Clarity of Explanation**: How well you explain your tracking and control approach
-- **Code Quality**: Whether the code is well-structured and documented
-- **Visualization Quality**: How clearly the trajectory and control performance are visualized
+- How accurately you track the robot's position and orientation over time
+- How well the robot follows desired trajectories (tracking error, convergence time)
+- How well you maintain tracking even during occlusions
+- How well you explain your tracking and control approach
+- Whether the code is well-structured and documented
+- How clearly the trajectory and control performance are visualized
 
 You should measure and report:
 
-- **Position Error**: How far off your position estimates are from ground truth (if available)
-- **Trajectory Tracking Error**: How accurately the robot follows desired trajectories (position error, orientation error)
-- **Control Performance**: Convergence time, steady-state error, control effort
-- **Tracking Duration**: What percentage of frames the robot is successfully tracked
-- **Trajectory Similarity**: How similar your reconstructed trajectory is to the actual/desired path
-- **Occlusion Handling**: How well you maintain tracking during occlusions
-- **Visualization Clarity**: Quality of trajectory and control performance visualization
+- How far off your position estimates are from ground truth (if available)
+- How accurately the robot follows desired trajectories (position error, orientation error)
+- Convergence time, steady-state error, control effort
+- What percentage of frames the robot is successfully tracked
+- How similar your reconstructed trajectory is to the actual/desired path
+- How well you maintain tracking during occlusions
+- Quality of trajectory and control performance visualization
 
 ## Future Extensions (Optional)
 

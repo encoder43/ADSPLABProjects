@@ -22,10 +22,10 @@ Build a method to estimate how many people are in a room from surveillance camer
 
 Students should work on:
 
-1. **People Detection**: Use object detection methods to find people in video frames
-2. **Counting**: Count the detected people, handling overlaps and occlusions
-3. **Temporal Smoothing**: Combine information across multiple frames to improve accuracy
-4. **Evaluation**: Test the system and measure counting accuracy
+1. Use object detection methods to find people in video frames
+2. Count the detected people, handling overlaps and occlusions
+3. Combine information across multiple frames to improve accuracy
+4. Test the system and measure counting accuracy
 
 You should think about:
 - **Model selection for edge devices**: Consider what makes a model suitable for edge device deployment. How do you balance accuracy with computational efficiency? What characteristics should you look for when selecting or designing models for limited-resource environments?
@@ -57,7 +57,7 @@ Make sure to document which dataset you use and any preprocessing steps.
 
 ## Deliverables
 
-1. **Counting Code**: Working implementation that processes video and outputs occupancy counts
+1.  Working implementation that processes video and outputs occupancy counts
 2. **Results**: Occupancy count results for test videos with ground truth comparisons
 3. **Report**: Brief report (10-15 pages) explaining:
    - Your detection and counting approach
@@ -65,7 +65,7 @@ Make sure to document which dataset you use and any preprocessing steps.
    - Results showing counting accuracy
    - Analysis of errors and when they occur
    - Discussion of computational efficiency
-4. **Visual Outputs**: Videos or images showing detected people with count overlays
+4.  Videos or images showing detected people with count overlays
 
 **Note:** It is not required or expected that you complete all aspects of the project. Evaluation is done based on how much percentage of the criteria is fulfilled. Focus on demonstrating understanding and implementing a working solution for the core aspects of your assigned problem.
 
@@ -73,19 +73,19 @@ Make sure to document which dataset you use and any preprocessing steps.
 
 Your work will be evaluated based on:
 
-- **Counting Accuracy**: How close your counts are to the actual number of people
-- **Computation Time**: How fast the system processes video (frames per second) on edge devices
-- **Model Efficiency**: Model size, memory usage, and computational requirements suitable for edge deployment
-- **Robustness**: How well it works with different room sizes, camera angles, and lighting
-- **Clarity of Explanation**: How clearly you explain your method and model selection rationale
+- How close your counts are to the actual number of people
+- How fast the system processes video (frames per second) on edge devices
+- Model size, memory usage, and computational requirements suitable for edge deployment
+- How well it works with different room sizes, camera angles, and lighting
+- How clearly you explain your method and model selection rationale
 
 You should measure and report:
 
-- **Mean Absolute Error (MAE)**: Average difference between your count and actual count
-- **Accuracy within ±1**: Percentage of frames where your count is within 1 of the actual
-- **Accuracy within ±2**: Percentage of frames where your count is within 2 of the actual
-- **Processing Speed**: Frames per second (FPS) that you can process
-- **Error Analysis**: When and why counting errors occur
+- Average difference between your count and actual count
+- Percentage of frames where your count is within 1 of the actual
+- Percentage of frames where your count is within 2 of the actual
+- Frames per second (FPS) that you can process
+- When and why counting errors occur
 
 ## Future Extensions (Optional)
 

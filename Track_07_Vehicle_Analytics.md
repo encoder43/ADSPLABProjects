@@ -22,11 +22,11 @@ Design a video processing system that detects and counts vehicles in recorded tr
 
 Students should implement:
 
-1. **Vehicle Detection**: Use object detection methods to find vehicles in video frames
-2. **Vehicle Tracking**: Track detected vehicles across frames to maintain identities
-3. **Counting**: Count vehicles passing through defined counting lines or regions
-4. **Optional Speed Estimation**: Estimate vehicle speeds using pixel-to-meter calibration
-5. **Statistics**: Generate basic traffic statistics (counts, flow rates, etc.)
+1. Use object detection methods to find vehicles in video frames
+2. Track detected vehicles across frames to maintain identities
+3. Count vehicles passing through defined counting lines or regions
+4. Estimate vehicle speeds using pixel-to-meter calibration
+5. Generate basic traffic statistics (counts, flow rates, etc.)
 
 You should think about:
 - **Vehicle detection models**: Consider using pre-trained vehicle detection models (like YOLO, SSD, or similar). Think about what characteristics make a detection model suitable for traffic scenarios. What are the trade-offs between different model architectures?
@@ -55,15 +55,15 @@ Make sure to document which dataset you use and any preprocessing steps.
 
 ## Deliverables
 
-1. **Detection and Counting Code**: Working implementation that processes traffic video and counts vehicles
-2. **Count Results**: Results showing vehicle counts for test videos with ground truth comparisons
+1.  Working implementation that processes traffic video and counts vehicles
+2.  Results showing vehicle counts for test videos with ground truth comparisons
 3. **Report**: Brief report (10-15 pages) explaining:
    - Your detection and tracking approach
    - How you count vehicles (counting lines, regions, etc.)
    - Results showing counting accuracy
    - Analysis of errors and when they occur
    - Discussion of challenges (occlusions, multiple vehicles, etc.)
-4. **Visual Outputs**: Videos or images showing detected and tracked vehicles with count overlays
+4.  Videos or images showing detected and tracked vehicles with count overlays
 
 **Note:** It is not required or expected that you complete all aspects of the project. Evaluation is done based on how much percentage of the criteria is fulfilled. Focus on demonstrating understanding and implementing a working solution for the core aspects of your assigned problem.
 
@@ -71,11 +71,11 @@ Make sure to document which dataset you use and any preprocessing steps.
 
 Your work will be evaluated based on:
 
-- **Counting Accuracy**: Count error, mean absolute error, accuracy within ±1 or ±2 vehicles
-- **Tracking Quality**: ID switches, track fragmentation, how well you maintain vehicle identities
-- **Processing Speed**: Frames per second you can process
-- **Robustness**: How well it handles different traffic densities and conditions
-- **Clarity**: Quality of visualization, explanation, and error analysis
+- Count error, mean absolute error, accuracy within ±1 or ±2 vehicles
+- ID switches, track fragmentation, how well you maintain vehicle identities
+- Frames per second you can process
+- How well it handles different traffic densities and conditions
+- Quality of visualization, explanation, and error analysis
 
 ## Future Extensions (Optional)
 

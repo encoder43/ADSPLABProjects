@@ -22,11 +22,11 @@ Create a tracking process that uses both video input and positional data (like G
 
 Students should work on:
 
-1. **Data Synchronization**: Align video frames with GPS/AIS timestamps, accounting for different update rates
-2. **Visual Detection**: Detect ships in video frames using object detection methods
-3. **Data Association**: Match video detections to GPS tracks using spatial and temporal information
-4. **Tracking**: Maintain vessel identities across frames, even when temporarily hidden
-5. **Fusion**: Combine information from both sources to get better position estimates
+1. Align video frames with GPS/AIS timestamps, accounting for different update rates
+2. Detect ships in video frames using object detection methods
+3. Match video detections to GPS tracks using spatial and temporal information
+4. Maintain vessel identities across frames, even when temporarily hidden
+5. Combine information from both sources to get better position estimates
 
 You can use:
 - Object detection libraries (like YOLO or similar) for finding ships in video
@@ -49,15 +49,15 @@ Make sure to document your dataset sources and any preprocessing you do.
 
 ## Deliverables
 
-1. **Tracking Code**: Working implementation that processes video and GPS data to produce tracking results
-2. **Tracking Output**: Visualizations showing tracked vessels with plotted trajectories
+1.  Working implementation that processes video and GPS data to produce tracking results
+2.  Visualizations showing tracked vessels with plotted trajectories
 3. **Report**: Brief report (10-15 pages) explaining:
    - How you synchronize the data
    - Your detection and tracking approach
    - How you match video to GPS data
    - Results showing tracking accuracy
    - Discussion of challenges and solutions
-4. **Demo Video**: Video showing the tracking system in action with overlaid trajectories
+4.  Video showing the tracking system in action with overlaid trajectories
 
 **Note:** It is not required or expected that you complete all aspects of the project. Evaluation is done based on how much percentage of the criteria is fulfilled. Focus on demonstrating understanding and implementing a working solution for the core aspects of your assigned problem.
 
@@ -65,18 +65,18 @@ Make sure to document your dataset sources and any preprocessing you do.
 
 Your work will be evaluated based on:
 
-- **Tracking Accuracy**: How accurately you estimate vessel positions
-- **Smoothness**: How consistent and smooth the tracking is (no sudden jumps)
-- **Identity Preservation**: Whether you maintain correct vessel identities
-- **Robustness**: How well it handles sensor failures or occlusions
-- **Clarity of Explanation**: How well you explain your approach
+- How accurately you estimate vessel positions
+- How consistent and smooth the tracking is (no sudden jumps)
+- Whether you maintain correct vessel identities
+- How well it handles sensor failures or occlusions
+- How well you explain your approach
 
 You should measure and report:
 
-- **Position Error**: How far off your position estimates are from ground truth
-- **ID Switches**: How often you mix up which vessel is which
-- **Track Fragmentation**: How often you lose and reacquire tracks
-- **Tracking Duration**: What percentage of time each vessel is successfully tracked
+- How far off your position estimates are from ground truth
+- How often you mix up which vessel is which
+- How often you lose and reacquire tracks
+- What percentage of time each vessel is successfully tracked
 
 ## Future Extensions (Optional)
 
