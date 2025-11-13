@@ -46,7 +46,7 @@ The primary objective is to foster analytical thinking and problem-solving in re
 
 ## Deliverables
 
-- **Code**: Working implementation with clear comments and structure (GitHub link will be shared via Google Form)
+- **Code**: Working implementation with clear comments and structure (GitHub link need to be submited via Google Form)
 - **Report**: Written report (10-15 pages) describing problem understanding, methodology, implementation, results, and conclusions
 - **Results**: Visual outputs, performance metrics, and demonstration videos (if applicable)
 - **Presentation**: Brief presentation (10-15 minutes) explaining the work
