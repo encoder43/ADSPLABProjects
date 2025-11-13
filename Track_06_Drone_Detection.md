@@ -10,13 +10,14 @@ The challenge is that drones appear as very small objects in images, especially 
 
 ## Objective
 
-Create a stereo-based detection system that can detect flying drones and estimate their distance and movement. The system should:
+Create a stereo-based detection system that can detect, track, and potentially capture flying drones. The system should:
 
 1. Detect small drones in stereo image pairs
 2. Estimate 3D position using stereo disparity computation
-3. Track drone movement over time
+3. Track drone movement over time using Kalman filtering
 4. Estimate distance accurately for security-relevant ranges
 5. Work in real-time or near real-time
+6. Provide information necessary for potential capture/interception (trajectory prediction, 3D position)
 
 ## Expected Work
 
@@ -45,11 +46,12 @@ You should:
 
 You can use the following datasets:
 
-- **Drone Detection Datasets**: Public datasets with drone imagery and annotations
-- **Stereo Vision Datasets**: Datasets with stereo image pairs (you can adapt them for drone detection)
-- **Aerial Object Datasets**: Datasets containing small flying objects
-- **Custom Data**: You can create custom scenarios using available footage
-- **Simulated Data**: You can create scenarios using 3D graphics or combine existing footage
+- **Anti-UAV Dataset**: Large-scale dataset for detecting and tracking small UAVs with stereo and monocular data
+- **Drone-vs-Bird Dataset**: Dataset specifically designed to distinguish drones from birds
+- **FL-Drones Dataset**: Flying Lightweight Drones dataset with detection and tracking annotations
+- **KITTI Dataset**: Comprehensive dataset with calibrated stereo pairs, traffic scenes, and vehicle tracking (see Track 07 and Track 08 for other uses)
+- **Middlebury Stereo Datasets**: High-quality stereo image pairs for stereo vision development
+- **Custom or Simulated Data**: You can create custom scenarios using available footage or simulate using 3D graphics
 
 Note: You can work with provided stereo datasets or simulate stereo pairs from single camera footage.
 
@@ -66,7 +68,9 @@ Note: You can work with provided stereo datasets or simulate stereo pairs from s
    - Discussion of challenges and limitations
 4. **Data Analysis**: Results showing distance estimation accuracy compared to ground truth (if available)
 
-## Evaluation Parameters
+**Note:** It is not required or expected that you complete all aspects of the project. Evaluation is done based on how much percentage of the criteria is fulfilled. Focus on demonstrating understanding and implementing a working solution for the core aspects of your assigned problem.
+
+## Evaluation
 
 Your work will be evaluated based on:
 
@@ -75,8 +79,6 @@ Your work will be evaluated based on:
 - **Tracking Quality**: How well you track drones over time
 - **Clarity of Explanation**: How clearly you explain your stereo vision approach
 - **Robustness**: How well it works at different distances and conditions
-
-## Evaluation Metrics
 
 You should measure and report:
 
@@ -98,6 +100,4 @@ If you want to extend the project, you could:
 
 ---
 
-**Note:**
-
-*This problem statement is part of the ADSP Lab Final Project Series under the supervision of Dr. Upendra Kumar Sahoo, coordinated by TA Yerram Deekshith Kumar.*
+**Supervision:** All projects are evaluated by Dr. Upendra Kumar Sahoo and coordinated by TA Kannuru Srinadh,Yerram Deekshith Kumar,Debapriya Das Gupta ADSP Lab, NIT Rourkela.

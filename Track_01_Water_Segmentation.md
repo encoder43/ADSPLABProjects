@@ -1,4 +1,4 @@
-# Identifying Water Regions from Aerial or Satellite Images
+# Water Body Segmentation in Agricultural Remote Sensing
 
 ## Background
 
@@ -19,14 +19,15 @@ Develop an image processing approach that can identify and segment water areas f
 
 ## Expected Work
 
-Students should explore different approaches to solve this problem. Possible methods include:
+Students should explore different approaches to solve this problem. Consider the following aspects:
 
+- **Efficient network design**: Think about how to design network architectures that are suitable for agricultural remote sensing applications. What makes a network "lightweight" or efficient? How can you balance accuracy with computational constraints?
+- **Feature focus mechanisms**: Consider how to make your method focus on the most relevant features for water segmentation. What techniques could help your model pay more attention to water regions while ignoring irrelevant details like shadows or vegetation?
+- **Temporal smoothing for video sequences**: If working with video sequences, think about how to smooth segmentation results over time. Kalman filtering can be used here, but consider: can the filter parameters be learned or adapted rather than being fixed? How might this improve performance for agricultural imagery?
 - **Threshold-based segmentation**: Using color or intensity thresholds to separate water from other regions
 - **Filtering and edge detection**: Applying image filters and detecting edges to identify water boundaries
 - **Region-based segmentation**: Grouping similar pixels together to form water regions
-- **Machine learning approaches**: Training models to classify pixels as water or non-water
 - **Hybrid methods**: Combining multiple techniques for better results
-- **Temporal smoothing (for video sequences)**: If working with video sequences, Kalman filtering can be used to smooth segmentation results over time. Kalman filters can maintain estimates of water region boundaries and areas, combining predictions based on previous frames with new segmentation measurements to provide stable, temporally consistent results even when individual frame segmentations are noisy.
 
 You should:
 1. Implement at least one segmentation method
@@ -38,10 +39,13 @@ You should:
 
 You can use the following datasets for this project:
 
-- **Water Bodies Dataset**: Public datasets containing satellite or aerial images with water body annotations
-- **Sentinel-2 Satellite Imagery**: Free satellite imagery from the European Space Agency
-- **Landsat Imagery**: Publicly available satellite imagery from USGS
-- **Custom datasets**: You can also collect your own images if you have access to drone or aerial photography
+- **DeepGlobe Land Cover Classification Challenge**: Large-scale dataset with satellite imagery and land cover annotations including water bodies
+- **SpaceNet Building Detection & Segmentation**: Contains satellite imagery with various land cover types including water
+- **Sentinel-2 Satellite Imagery**: Free satellite imagery from the European Space Agency (ESA) - available through Copernicus Open Access Hub
+- **Landsat Imagery**: Publicly available satellite imagery from USGS EarthExplorer with historical data
+- **Water Bodies Dataset (Kaggle)**: Various water segmentation datasets available on Kaggle
+- **USGS Water Body Dataset**: Annotated water body datasets from US Geological Survey
+- **Custom Data**: You can collect your own images if you have access to drone or aerial photography
 
 Make sure to document which dataset you use and how you obtained it.
 
@@ -57,17 +61,16 @@ Make sure to document which dataset you use and how you obtained it.
    - Comparison with other methods (if applicable)
 4. **Visual Outputs**: Images showing original photos, segmentation masks, and overlays
 
-## Evaluation Parameters
+**Note:** It is not required or expected that you complete all aspects of the project. Evaluation is done based on how much percentage of the criteria is fulfilled. Focus on demonstrating understanding and implementing a working solution for the core aspects of your assigned problem.
+
+## Evaluation
 
 Your work will be evaluated based on:
 
 - **Accuracy**: How well your method identifies water regions correctly
-  - Metrics: Intersection over Union (IoU), pixel accuracy, precision, recall
 - **Robustness**: How well it handles different lighting conditions and image types
 - **Clarity of Explanation**: How clearly you explain your approach and results
 - **Code Quality**: Whether the code is well-structured and documented
-
-## Evaluation Metrics
 
 You should measure and report:
 
@@ -87,6 +90,4 @@ If you want to extend the project, you could:
 
 ---
 
-**Note:**
-
-*This problem statement is part of the ADSP Lab Final Project Series under the supervision of Dr. Upendra Kumar Sahoo, coordinated by TA Yerram Deekshith Kumar.*
+**Supervision:** All projects are evaluated by Dr. Upendra Kumar Sahoo and coordinated by TA Kannuru Srinadh,Yerram Deekshith Kumar,Debapriya Das Gupta ADSP Lab, NIT Rourkela.

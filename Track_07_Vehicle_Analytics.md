@@ -1,4 +1,4 @@
-# Vehicle Detection and Counting in Traffic Videos
+# Vehicle Detection, Tracking and Counting in Traffic Video Streams
 
 ## Background
 
@@ -28,9 +28,9 @@ Students should implement:
 4. **Optional Speed Estimation**: Estimate vehicle speeds using pixel-to-meter calibration
 5. **Statistics**: Generate basic traffic statistics (counts, flow rates, etc.)
 
-You can use:
-- Pre-trained vehicle detection models (like YOLO, SSD, or similar)
-- Tracking algorithms (like DeepSORT, ByteTrack, or simpler methods): Kalman filtering can be used to maintain vehicle position and velocity estimates, combining noisy detections with motion predictions to provide smooth tracking and handle occlusions.
+You should think about:
+- **Vehicle detection models**: Consider using pre-trained vehicle detection models (like YOLO, SSD, or similar). Think about what characteristics make a detection model suitable for traffic scenarios. What are the trade-offs between different model architectures?
+- **Multi-object tracking approaches**: Think about how to track multiple vehicles across frames. How can you combine appearance features with motion prediction? Consider tracking algorithms that use Kalman filtering to maintain vehicle position and velocity estimates, combining noisy detections with motion predictions to provide smooth tracking and handle occlusions. What role does appearance matching play in maintaining vehicle identities?
 - Counting logic that tracks vehicles crossing lines or entering/exiting regions
 - Calibration methods to convert pixel distances to real-world distances
 
@@ -44,11 +44,12 @@ You should:
 
 You can use the following datasets:
 
-- **Traffic Datasets**: Public datasets like UA-DETRAC, KITTI (traffic scenes), or Cityscapes
-- **Vehicle Detection Datasets**: Datasets with vehicle annotations in traffic scenes
-- **Traffic Monitoring Datasets**: Datasets specifically designed for traffic analysis
-- **Custom Data**: You can use publicly available traffic camera footage (with proper attribution)
-- **Simulated Scenarios**: You can create test scenarios using available video footage
+- **UA-DETRAC Dataset**: Large-scale dataset with 10 hours of videos, 140,000 frames, and 8,250 vehicles with tracking annotations
+- **KITTI Dataset**: Comprehensive dataset with traffic scenes, vehicle annotations, tracking data, and stereo pairs (also used in Track 06 and Track 08)
+- **Cityscapes Dataset**: Large-scale dataset with 5,000 fine-annotated images and 20,000 coarse-annotated images
+- **BDD100K Dataset**: Berkeley DeepDrive dataset with 100,000 videos and diverse traffic scenarios
+- **nuScenes Dataset**: Large-scale autonomous driving dataset with 3D bounding boxes and tracking
+- **Custom or Simulated Data**: You can use publicly available traffic camera footage (with proper attribution) or create test scenarios
 
 Make sure to document which dataset you use and any preprocessing steps.
 
@@ -63,6 +64,8 @@ Make sure to document which dataset you use and any preprocessing steps.
    - Analysis of errors and when they occur
    - Discussion of challenges (occlusions, multiple vehicles, etc.)
 4. **Visual Outputs**: Videos or images showing detected and tracked vehicles with count overlays
+
+**Note:** It is not required or expected that you complete all aspects of the project. Evaluation is done based on how much percentage of the criteria is fulfilled. Focus on demonstrating understanding and implementing a working solution for the core aspects of your assigned problem.
 
 ## Evaluation
 
@@ -86,6 +89,4 @@ If you want to extend the project, you could:
 
 ---
 
-**Note:**
-
-*This problem statement is part of the ADSP Lab Final Project Series under the supervision of Dr. Upendra Kumar Sahoo, coordinated by TA Yerram Deekshith Kumar.*
+**Supervision:** All projects are evaluated by Dr. Upendra Kumar Sahoo and coordinated by TA Kannuru Srinadh,Yerram Deekshith Kumar,Debapriya Das Gupta ADSP Lab, NIT Rourkela.

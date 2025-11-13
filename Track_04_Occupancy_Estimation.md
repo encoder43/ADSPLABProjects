@@ -1,4 +1,4 @@
-# Estimating Room Occupancy Using CCTV Footage
+# CCTV-Based Occupancy Estimation on Edge Devices
 
 ## Background
 
@@ -6,7 +6,7 @@ Knowing how many people are in a space can help with managing energy use, safety
 
 Traditional occupancy sensors like motion detectors cannot count people, and they might miss someone who is sitting still. CO2 sensors can estimate occupancy indirectly, but they are slow to respond and not very accurate.
 
-Many buildings already have surveillance cameras. If we can make those cameras count people, we do not need to install new sensors. The challenge is doing this efficiently, especially if the system needs to run on small computers typically used in surveillance systems.
+Many buildings already have CCTV surveillance cameras. If we can make those cameras count people, we do not need to install new sensors. The challenge is doing this efficiently on edge devices (small computers, embedded systems, or edge computing devices) typically used in surveillance systems, which have limited computational resources and power constraints.
 
 ## Objective
 
@@ -27,11 +27,13 @@ Students should work on:
 3. **Temporal Smoothing**: Combine information across multiple frames to improve accuracy
 4. **Evaluation**: Test the system and measure counting accuracy
 
-You can use:
-- Pre-trained person detection models (like YOLO, SSD, or similar)
+You should think about:
+- **Model selection for edge devices**: Consider what makes a model suitable for edge device deployment. How do you balance accuracy with computational efficiency? What characteristics should you look for when selecting or designing models for limited-resource environments?
+- Pre-trained person detection models (like YOLO, SSD, or similar) - consider what modifications might make them more suitable for edge deployment
 - Counting-specific methods that estimate density maps
 - Temporal filtering to smooth counts over time: Kalman filtering can be used to maintain smooth estimates of occupancy counts by combining predictions based on previous counts with new detection measurements. Kalman filters work by maintaining an estimate of the occupancy state and updating it with each new frame, providing filtered counts that are less sensitive to temporary detection errors or occlusions.
 - Region-of-interest processing to focus on relevant areas
+- **Model optimization strategies**: Think about techniques that could reduce model size, memory usage, or computational requirements while maintaining acceptable accuracy. What approaches could make models more efficient for edge deployment?
 
 You should:
 1. Implement a counting method
@@ -43,11 +45,13 @@ You should:
 
 You can use the following datasets:
 
-- **COCO Dataset**: Contains person detection annotations (subset for people)
-- **Crowd Counting Datasets**: Datasets like ShanghaiTech, UCF-CC-50, or WorldExpo'10
-- **Occupancy Datasets**: Public datasets with room occupancy video and ground truth counts
-- **Custom Data**: You can collect your own data in controlled environments (with proper permissions)
-- **Surveillance Video Datasets**: Public surveillance footage datasets with annotations
+- **ShanghaiTech Dataset**: Large-scale crowd counting dataset with Part A (482 images) and Part B (716 images)
+- **UCF-CC-50 Dataset**: Challenging crowd counting dataset with 50 images of varying densities
+- **WorldExpo'10 Dataset**: Dataset with 3,980 frames from 108 cameras with head annotations
+- **Mall Dataset**: Indoor surveillance dataset with 2,000 frames and pedestrian annotations
+- **UCSD Pedestrian Dataset**: Dataset with 2,000 frames from surveillance cameras
+- **COCO Dataset**: Contains person detection annotations (subset for people) - useful for person detection
+- **Custom Data**: You can collect your own data in controlled environments (with proper permissions) or use public surveillance footage datasets with annotations
 
 Make sure to document which dataset you use and any preprocessing steps.
 
@@ -63,17 +67,17 @@ Make sure to document which dataset you use and any preprocessing steps.
    - Discussion of computational efficiency
 4. **Visual Outputs**: Videos or images showing detected people with count overlays
 
-## Evaluation Parameters
+**Note:** It is not required or expected that you complete all aspects of the project. Evaluation is done based on how much percentage of the criteria is fulfilled. Focus on demonstrating understanding and implementing a working solution for the core aspects of your assigned problem.
+
+## Evaluation
 
 Your work will be evaluated based on:
 
 - **Counting Accuracy**: How close your counts are to the actual number of people
-  - Metrics: Mean Absolute Error (MAE), accuracy within ±1 or ±2 people
-- **Computation Time**: How fast the system processes video (frames per second)
+- **Computation Time**: How fast the system processes video (frames per second) on edge devices
+- **Model Efficiency**: Model size, memory usage, and computational requirements suitable for edge deployment
 - **Robustness**: How well it works with different room sizes, camera angles, and lighting
-- **Clarity of Explanation**: How clearly you explain your method
-
-## Evaluation Metrics
+- **Clarity of Explanation**: How clearly you explain your method and model selection rationale
 
 You should measure and report:
 
@@ -95,6 +99,4 @@ If you want to extend the project, you could:
 
 ---
 
-**Note:**
-
-*This problem statement is part of the ADSP Lab Final Project Series under the supervision of Dr. Upendra Kumar Sahoo, coordinated by TA Yerram Deekshith Kumar.*
+**Supervision:** All projects are evaluated by Dr. Upendra Kumar Sahoo and coordinated by TA Kannuru Srinadh,Yerram Deekshith Kumar,Debapriya Das Gupta ADSP Lab, NIT Rourkela.

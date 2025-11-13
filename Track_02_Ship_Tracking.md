@@ -38,10 +38,12 @@ You can use:
 
 You can use the following datasets:
 
-- **Maritime Datasets**: Public datasets containing ship video footage with GPS/AIS annotations
-- **AIS Data**: Public Automatic Identification System data from marine traffic websites
-- **Custom Data**: If you have access to cameras near waterways, you can collect your own data
-- **Simulated Data**: You can create synthetic scenarios by combining video footage with simulated GPS tracks
+- **SeaShips Dataset**: Large-scale dataset with 31,000+ ship images and annotations, commonly used for ship detection and tracking
+- **ShipRSImageNet**: Comprehensive ship dataset with various ship types and annotations
+- **MARVEL Dataset**: Maritime video dataset with vessel tracking annotations
+- **AIS Data**: Public Automatic Identification System data from marine traffic websites (MarineTraffic, AISHub)
+- **Inland Waterway Datasets**: Custom datasets from research papers on inland waterway tracking
+- **Custom or Simulated Data**: If you have access to cameras near waterways, you can collect your own data or create synthetic scenarios by combining video footage with simulated GPS tracks
 
 Make sure to document your dataset sources and any preprocessing you do.
 
@@ -57,7 +59,9 @@ Make sure to document your dataset sources and any preprocessing you do.
    - Discussion of challenges and solutions
 4. **Demo Video**: Video showing the tracking system in action with overlaid trajectories
 
-## Evaluation Parameters
+**Note:** It is not required or expected that you complete all aspects of the project. Evaluation is done based on how much percentage of the criteria is fulfilled. Focus on demonstrating understanding and implementing a working solution for the core aspects of your assigned problem.
+
+## Evaluation
 
 Your work will be evaluated based on:
 
@@ -66,8 +70,6 @@ Your work will be evaluated based on:
 - **Identity Preservation**: Whether you maintain correct vessel identities
 - **Robustness**: How well it handles sensor failures or occlusions
 - **Clarity of Explanation**: How well you explain your approach
-
-## Evaluation Metrics
 
 You should measure and report:
 
@@ -87,6 +89,4 @@ If you want to extend the project, you could:
 
 ---
 
-**Note:**
-
-*This problem statement is part of the ADSP Lab Final Project Series under the supervision of Dr. Upendra Kumar Sahoo, coordinated by TA Yerram Deekshith Kumar.*
+**Supervision:** All projects are evaluated by Dr. Upendra Kumar Sahoo and coordinated by TA Kannuru Srinadh,Yerram Deekshith Kumar,Debapriya Das Gupta ADSP Lab, NIT Rourkela.

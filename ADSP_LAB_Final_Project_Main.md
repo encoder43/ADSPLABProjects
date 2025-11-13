@@ -1,8 +1,8 @@
-# ADSP Lab Final Project – Applied Signal Processing and Estimation Tasks
+# ADSP Lab Final Project – Advanced Digital Signal Processing
 
 ## Introduction
 
-The Advanced Digital Signal Processing (ADSP) Lab at NIT Rourkela offers a set of practical problem statements for final projects. These projects are designed to help students apply their learning in signal processing, estimation, and vision-based systems to real-world scenarios.
+The Advanced Digital Signal Processing (ADSP) Lab at NIT Rourkela as a part of its lab evaluation ,Prepared a set of practical problem statements for final projects. These projects are designed to help students apply their learning in signal processing, estimation, and vision-based systems to real-world scenarios.
 
 In these projects, students will work on problems that combine classical signal processing techniques (like Kalman filtering for state estimation and tracking) with modern computer vision methods. The goal is to build systems that can process visual information, track objects, and make decisions in practical applications.
 
@@ -59,9 +59,11 @@ The main objective is to encourage analytical thinking and problem-solving in re
 - **Results**: Quality of results and proper evaluation
 - **Documentation**: Clarity and completeness of the report and project explanation
 
+**Note:** It is not required or expected that you complete all aspects of the project. Evaluation is done based on how much percentage of the criteria is fulfilled. Focus on demonstrating understanding and implementing a working solution for the core aspects of your assigned problem.
+
 ## Timeline
 
-- **Project Submission**: 12th November to 3rd December
+- **Project Submission**: 25th November to 3rd December
 
 ## Technical Requirements
 
@@ -76,7 +78,7 @@ Students can use any programming language, but Python is recommended. Common lib
 
 ### Datasets
 
-Each project description includes suggested datasets. Students can use provided datasets (if available) or publicly available datasets.
+Each project description includes suggested datasets. Students can use publicly available datasets.
 
 ### Computing Resources
 
@@ -88,7 +90,7 @@ Projects can be completed using standard laptops/desktops, cloud computing resou
 
 1. **Check Your Assignment**: Find your roll number in the Project Assignment section above to identify your assigned project and team members
 2. **Read Your Project Description**: Read the detailed problem statement for your assigned project (Track_01 through Track_08 files)
-3. **Coordinate with Your Team**: Contact your team members and establish communication channels for collaboration Discord is preferred.
+3. **Coordinate with Your Team**: Contact your team members and establish communication channels for collaboration Discord is preferred sitting together in the lab and working is also encouraged as it is not mandatory it is your choice.
 4. **Review Background Material**: Study relevant background material, algorithms, and suggested datasets for your project
 5. **Plan Your Approach**: Discuss with your team and propose a methodology to solve the problem
 6. **Start Implementation**: Begin with a simple baseline approach and iteratively improve your solution
@@ -96,7 +98,7 @@ Projects can be completed using standard laptops/desktops, cloud computing resou
 
 ## Important Notes
 
-- Projects should be original work. You can use existing algorithms and libraries, but you must understand and explain what you're using
+- Projects can be original work or any work inspiread from the research articles. You can use existing algorithms and libraries, but you must understand and explain what you're using
 - Proper citations are required for any methods, datasets, or code you use from other sources
 - Collaboration within teams is encouraged, but each team's work should be independent
 - If you face technical difficulties, reach out early rather than waiting until the deadline

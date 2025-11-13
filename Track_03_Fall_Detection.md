@@ -1,4 +1,4 @@
-# Detecting Human Falls in Video Sequences
+# Multi-Person Fall Detection in Video Sequences
 
 ## Background
 
@@ -10,13 +10,14 @@ Vision-based fall detection uses cameras that are already common in many care fa
 
 ## Objective
 
-Design a system that detects when a person falls by analyzing video footage. The system should:
+Design a system that detects when one or more people fall by analyzing video footage. The system should:
 
-1. Track people in video sequences
-2. Identify fall events accurately
+1. Track multiple people simultaneously in video sequences
+2. Identify fall events accurately for each person
 3. Distinguish falls from similar activities like sitting or bending
 4. Work in real-time or near real-time
 5. Minimize false alarms
+6. Handle multiple people in the same scene without confusion
 
 ## Expected Work
 
@@ -24,7 +25,7 @@ Students should experiment with different approaches to detect falls. Possible m
 
 - **Frame Difference Analysis**: Compare consecutive frames to detect sudden motion changes
 - **Bounding Box Analysis**: Track person bounding boxes and detect when aspect ratio changes rapidly (tall when standing, wide when lying)
-- **Motion Pattern Analysis**: Analyze velocity and acceleration patterns to identify sudden downward motion. Kalman filtering can be used here to track person position and velocity over time, providing smooth estimates of motion that help distinguish falls from normal activities. Kalman filters maintain state estimates (position, velocity, acceleration) and update them with noisy measurements, making them robust to detection failures and useful for analyzing motion trajectories.
+- **State estimation for multi-person tracking**: Think about how to track multiple people simultaneously. How can you combine observations (detections) with predictions (motion models) to maintain robust state estimates for each person? Kalman filtering can be used here to track person position, velocity, and acceleration over time, providing smooth estimates that help distinguish falls from normal activities. Consider how to maintain separate state estimates for each person in multi-person scenarios.
 - **Pose Estimation**: Use pose detection to identify when body orientation changes from vertical to horizontal
 - **State Machine Approach**: Model different states (standing, walking, sitting, lying) and detect transitions to "lying" that indicate falls
 
@@ -38,11 +39,12 @@ You should:
 
 You can use the following datasets:
 
-- **UR Fall Detection Dataset**: Contains fall and non-fall video sequences
-- **Multiple Cameras Fall Dataset**: Videos from different camera angles
-- **Fall Detection Dataset (FDD)**: Public dataset with annotated fall events
-- **Simulated Falls Dataset**: Datasets with actors performing simulated falls
-- **Custom Data**: You can create your own dataset with consent (ethical considerations apply)
+- **UR Fall Detection Dataset**: Contains fall and non-fall video sequences from multiple camera angles, widely used benchmark
+- **UP-Fall Detection Dataset**: University of Patras fall detection dataset with various activities and fall scenarios
+- **Multiple Cameras Fall Dataset (MCFD)**: Videos from different camera angles with synchronized multi-view data
+- **Fall Detection Dataset (FDD)**: Public dataset with annotated fall events and ADL (Activities of Daily Living)
+- **TST Fall Detection Dataset**: Dataset with temporal segmentation for fall detection
+- **Custom or Simulated Data**: You can create your own dataset with consent (ethical considerations apply) or use datasets with actors performing simulated falls in controlled environments
 
 Make sure to follow ethical guidelines when working with video data of people, and document your dataset sources.
 
@@ -58,7 +60,9 @@ Make sure to follow ethical guidelines when working with video data of people, a
    - Discussion of limitations and improvements
 4. **Results Summary**: Table or chart showing detection performance metrics
 
-## Evaluation Parameters
+**Note:** It is not required or expected that you complete all aspects of the project. Evaluation is done based on how much percentage of the criteria is fulfilled. Focus on demonstrating understanding and implementing a working solution for the core aspects of your assigned problem.
+
+## Evaluation
 
 Your work will be evaluated based on:
 
@@ -67,8 +71,6 @@ Your work will be evaluated based on:
 - **Precision**: When you say there's a fall, how often are you correct?
 - **Clarity of Explanation**: How well you explain your detection logic
 - **Robustness**: How well it works with different camera angles and lighting
-
-## Evaluation Metrics
 
 You should measure and report:
 
@@ -90,6 +92,4 @@ If you want to extend the project, you could:
 
 ---
 
-**Note:**
-
-*This problem statement is part of the ADSP Lab Final Project Series under the supervision of Dr. Upendra Kumar Sahoo, coordinated by TA Yerram Deekshith Kumar.*
+**Supervision:** All projects are evaluated by Dr. Upendra Kumar Sahoo and coordinated by TA Kannuru Srinadh,Yerram Deekshith Kumar,Debapriya Das Gupta ADSP Lab, NIT Rourkela.

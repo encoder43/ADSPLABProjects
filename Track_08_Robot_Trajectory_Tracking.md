@@ -1,102 +1,108 @@
-# Controlling the Motion Path of a Wheeled Robot Using Visual Feedback
+# Vision-Based Trajectory Tracking Control for Wheeled Mobile Robots
 
 ## Background
 
-Mobile robots need to follow specific paths accurately. Whether it is a delivery robot navigating a warehouse, an agricultural robot following crop rows, or a mobile robot in a factory, the ability to track a desired trajectory is essential.
+Tracking and controlling the movement path of a wheeled mobile robot in video footage is important for understanding behavior, analyzing performance, and enabling precise trajectory following. Whether it is a delivery robot in a warehouse, an autonomous vehicle, or a mobile robot in a controlled environment, being able to track and control its trajectory provides valuable insights for navigation and path following.
 
-Traditional approaches use wheel encoders to estimate position, but these can be inaccurate due to wheel slip. Inertial measurement units (IMUs) can help, but they accumulate drift over time. GPS works outdoors, but it is not available indoors and can be inaccurate.
+Traditional tracking methods rely on GPS or wheel encoders, but these can be inaccurate or unavailable in indoor environments. Vision-based tracking uses cameras that are already common in many environments and can provide rich information about robot movement without requiring additional sensors. For trajectory tracking control, the system needs to not only estimate the robot's position but also provide control signals to follow desired trajectories.
 
-Vision-based control uses cameras to understand where the robot is and where it needs to go. Cameras are passive sensors that do not require external infrastructure, are relatively inexpensive, and provide rich information about the environment. The challenge is processing that visual information quickly enough for real-time control and making it robust to lighting changes.
+The challenge is processing visual information to accurately track the robot's position and path over time, even when the robot is partially occluded or when lighting conditions change, and using this information for trajectory tracking control.
 
 ## Objective
 
-Design a control method that allows a robot to track and maintain a planned trajectory using visual feedback. The system should:
+Develop a vision-based trajectory tracking control system that can follow a wheeled mobile robot and control it to follow desired trajectories. The system should:
 
-1. Estimate the robot's position relative to a desired path using visual information
-2. Compute control commands (like linear and angular velocities) to follow the path
-3. Achieve accurate tracking with bounded errors
-4. Work in real-time suitable for robot control
-5. Handle varying lighting conditions
+1. Detect and track the robot in video frames
+2. Estimate the robot's position and orientation in each frame
+3. Use robust state estimation methods for tracking (consider how Kalman filtering could be enhanced or adapted)
+4. Implement trajectory tracking control using control theory methods
+5. Handle temporary occlusions or detection failures
+6. Visualize the tracked trajectory and control performance
 
 ## Expected Work
 
 Students should work on:
 
-1. **Visual Feature Extraction**: Process camera images to find features useful for understanding robot position (like lines, corners, or patterns)
-2. **Pose Estimation**: Estimate where the robot is relative to the desired trajectory
-3. **Trajectory Representation**: Define or load a desired trajectory (waypoints or a path)
-4. **Control Design**: Design a controller that computes velocities to follow the path
-5. **Integration**: Combine visual estimation with control to achieve trajectory tracking
+1. **Robot Detection**: Detect the robot/vehicle in video frames using object detection or template matching methods
+2. **Position Estimation**: Estimate the robot's position (center point or bounding box) in each frame
+3. **Trajectory Tracking**: Track the robot across frames and maintain its trajectory even during temporary occlusions
+4. **Trajectory Visualization**: Visualize the tracked path overlaid on the video or as a separate plot
 
-You can use:
-- Visual feature detection (like corner detection, line detection)
-- Pose estimation methods (geometric methods or simple matching): Kalman filtering can be used to maintain smooth estimates of robot pose (position and orientation) by combining visual pose measurements with motion predictions. Kalman filters help filter out noise in visual measurements, predict robot state between measurements, and provide robust pose estimates even when visual features are temporarily lost or occluded.
-- Control methods (like proportional control, PID control, or geometric path following)
-- Robot simulation environments (like Gazebo, V-REP, or simple 2D simulators)
+You should think about:
+- Object detection methods (like YOLO, SSD, or template matching) to find the robot in frames
+- **Enhanced state estimation**: Consider how Kalman filtering could be improved for this application. Can filter parameters be learned or adapted from data rather than being fixed? How might this improve state estimation compared to traditional Kalman filters?
+- **Control methods for trajectory tracking**: Think about control theory approaches for making the robot follow desired trajectories. What control methods provide good tracking performance? Consider approaches that ensure finite-time convergence and avoid control singularities that could cause problems.
+- Kalman filtering for tracking and prediction: Kalman filters can maintain smooth estimates of robot position, velocity, and orientation by combining noisy position measurements with motion predictions. They are particularly useful for tracking because they can predict where the robot will be even when detections are temporarily unavailable, and they provide filtered estimates that are robust to detection noise.
+- Python libraries: OpenCV for image processing, NumPy for numerical operations, Matplotlib for visualization, control libraries for implementing control algorithms
 
 You should:
-1. Implement visual pose estimation
-2. Design a control law for trajectory tracking
-3. Test in simulation
-4. Evaluate tracking accuracy
-5. Document your approach and results
+1. Implement robot detection in video frames
+2. Track the robot across frames using appropriate filtering methods
+3. Implement trajectory tracking control using suitable control theory approaches
+4. Reconstruct and visualize the trajectory and control performance
+5. Handle cases where the robot is temporarily occluded or not detected
+6. Document your approach and results, including control performance metrics
 
-## Datasets and Simulation
+## Datasets
 
-You can work with:
+You can use the following datasets:
 
-- **Robot Simulation**: Use simulation environments like Gazebo, V-REP/CoppeliaSim, or PyBullet
-- **Trajectory Data**: Define your own desired trajectories or use standard test paths
-- **Visual Landmarks**: Use environments with visual features (lines, markers, patterns) for easier tracking
+- **KITTI Dataset**: Comprehensive autonomous vehicle dataset with GPS/IMU data, visual tracking, stereo pairs, and traffic scenes (also used in Track 06 and Track 07)
+- **Waymo Open Dataset**: Large-scale autonomous driving dataset with high-quality sensor data and trajectory annotations
+- **TUM RGB-D Dataset**: Technical University of Munich dataset with RGB-D sequences and ground truth trajectories
+- **EuRoC MAV Dataset**: European Robotics Challenge dataset with visual-inertial sequences and ground truth trajectories
+- **Oxford RobotCar Dataset**: Large-scale dataset with repeated traversals of the same route, useful for trajectory analysis
+- **Custom or Simulated Data**: You can create your own videos by recording robot movement, use publicly available robot footage, or create simple 2D simulations using Python (Matplotlib animations)
 
-Note: This project should be completed entirely in simulation.
+Make sure to document which dataset you use and any preprocessing steps.
 
 ## Deliverables
 
-1. **Control Code**: Working implementation that processes camera images and computes control commands
-2. **Simulation Demo**: Demonstration showing the robot following a trajectory
-3. **Trajectory Plots**: Plots showing desired vs. actual robot trajectory
+1. **Tracking Code**: Working Python implementation that processes video and tracks robot trajectory
+2. **Trajectory Visualization**: Videos or images showing the tracked robot with trajectory overlaid
+3. **Trajectory Plots**: Plots showing the reconstructed trajectory path
 4. **Report**: Brief report (10-15 pages) explaining:
-   - Your visual pose estimation approach
-   - Your control design and why you chose it
-   - How you integrate vision with control
+   - Your detection and tracking approach
+   - How you handle occlusions and missed detections
+   - How you reconstruct and visualize the trajectory
    - Results showing tracking accuracy
-   - Analysis of tracking errors
-   - Discussion of stability and robustness
-5. **Video**: Video showing the robot (or simulation) following the trajectory
+   - Analysis of tracking errors and when they occur
+   - Discussion of limitations and improvements
+5. **Demo Video**: Video showing the tracking system in action with trajectory visualization
 
-## Evaluation Parameters
+**Note:** It is not required or expected that you complete all aspects of the project. Evaluation is done based on how much percentage of the criteria is fulfilled. Focus on demonstrating understanding and implementing a working solution for the core aspects of your assigned problem.
+
+## Evaluation
 
 Your work will be evaluated based on:
 
-- **Path Accuracy**: How accurately the robot follows the desired path
-  - Metrics: Lateral error, position error, orientation error
-- **Control Stability**: Whether the control is smooth and stable (no oscillations)
-- **Clarity of Explanation**: How well you explain your control approach
-- **Robustness**: How well it handles disturbances or changes in conditions
-
-## Evaluation Metrics
+- **Tracking Accuracy**: How accurately you track the robot's position and orientation over time
+- **Control Performance**: How well the robot follows desired trajectories (tracking error, convergence time)
+- **Tracking Continuity**: How well you maintain tracking even during occlusions
+- **Clarity of Explanation**: How well you explain your tracking and control approach
+- **Code Quality**: Whether the code is well-structured and documented
+- **Visualization Quality**: How clearly the trajectory and control performance are visualized
 
 You should measure and report:
 
-- **Lateral Error**: How far the robot deviates sideways from the desired path
-- **Position Error**: Overall distance error from desired position
-- **Orientation Error**: How much the robot's heading differs from desired heading
-- **Root Mean Square Error**: Average tracking error over the entire trajectory
-- **Convergence**: How quickly the robot converges to the path if it starts off-path
+- **Position Error**: How far off your position estimates are from ground truth (if available)
+- **Trajectory Tracking Error**: How accurately the robot follows desired trajectories (position error, orientation error)
+- **Control Performance**: Convergence time, steady-state error, control effort
+- **Tracking Duration**: What percentage of frames the robot is successfully tracked
+- **Trajectory Similarity**: How similar your reconstructed trajectory is to the actual/desired path
+- **Occlusion Handling**: How well you maintain tracking during occlusions
+- **Visualization Clarity**: Quality of trajectory and control performance visualization
 
 ## Future Extensions (Optional)
 
 If you want to extend the project, you could:
 
-- Add obstacle avoidance while tracking the trajectory
-- Handle more complex trajectories (sharp turns, loops)
-- Use multiple simulated sensors (combine vision with simulated IMU or encoder data)
-- Implement adaptive control that adjusts to different conditions
-- Extend to multiple robots following paths
+- Predict future robot positions based on trajectory history
+- Analyze trajectory patterns (speed, acceleration, turning behavior)
+- Handle multiple robots simultaneously
+- Use multiple camera views for better tracking
+- Detect unusual movement patterns or anomalies
 
 ---
 
-**Note:**
-
-*This problem statement is part of the ADSP Lab Final Project Series under the supervision of Dr. Upendra Kumar Sahoo, coordinated by TA Yerram Deekshith Kumar.*
+**Supervision:** All projects are evaluated by Dr. Upendra Kumar Sahoo and coordinated by TA Kannuru Srinadh,Yerram Deekshith Kumar,Debapriya Das Gupta ADSP Lab, NIT Rourkela.
